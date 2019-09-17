@@ -20,5 +20,9 @@
     "C_Cpp.clang_format_sortIncludes": true, // 格式化时调整include的顺序（按字母排序）
     "C_Cpp.errorSquiggles": "Disabled", // 因为有clang的lint，所以关掉；如果你看的是别的答主用的不是vscode-clangd，就不要加这个了
     "C_Cpp.autocomplete": "Disabled", // 同上；这几条也可以考虑放到全局里，否则很多错误会报两遍，cpptools一遍clangd一遍
-    "C_Cpp.suggestSnippets": false, // 同上
+    "C_Cpp.suggestSnippets": false,
+    "files.associations": {
+        "vector": "cpp",
+        "algorithm": "cpp"
+    }, // 同上
 }
