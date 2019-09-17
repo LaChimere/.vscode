@@ -3,18 +3,16 @@ using namespace std;
 int main(){
     int n;
     int k = 0;
-    cin>>n;
+    cin >> n;
     if(n>=0 && n<=1000){
         while(n!=1){
-            if(n%2==0){
+            if(n%2==0)
                 n /= 2;
-            }
-            else{
+            else
                 n = (3*n + 1) / 2;
-            }
             k++;
         }
     }
-    cout<<k;
+    cout << k;
     return 0;
 }
