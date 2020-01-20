@@ -1,18 +1,19 @@
-#include <iostream>
+#include <cstdio>
 using namespace std;
+
 int main(){
     int n;
-    int k = 0;
-    cin >> n;
-    if(n>=0 && n<=1000){
-        while(n!=1){
-            if(n%2==0)
-                n /= 2;
-            else
-                n = (3*n + 1) / 2;
-            k++;
+    int count = 0;
+    scanf("%d", &n);
+    while(n != 1){
+        if(n % 2){
+            n = (3 * n + 1) / 2;
+        } else {
+            n /= 2;
         }
+        count++;
     }
-    cout << k;
+    printf("%d", count);
+
     return 0;
 }

@@ -1,19 +1,13 @@
-#include <iostream>
-using namespace std;
+#include <cstdio>
 
 int main(){
-    int n;
-    cin >> n;
-    int b = n / 100;
-    n = n % 100;
-    int s = n / 10;
-    n = n % 10;
-    int g = n;
-    while(b--)
-        cout << "B";
-    while(s--)
-        cout << "S";
-    for(int i = 1; i <= g; i++)
-        cout << i;
+    int x;
+    scanf("%d", &x);
+    for (int i = 0; i < x / 100; i++)
+        printf("B");
+    for (int i = 0; i < (x % 100) / 10; i++)
+        printf("S");
+    for (int i = 1; i <= x % 10; i++)
+        printf("%d", i);
     return 0;
 }
