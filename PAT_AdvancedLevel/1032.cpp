@@ -21,9 +21,11 @@ int main() {
         words[i].flag = true;
     int i;
     for (i = head2; i != -1; i = words[i].next) {
-        if (words[i].flag == true)
-            break;
+        if (words[i].flag == true) {
+            printf("%05d", i);
+            return 0;
+        }
     }
-    printf("%d", i);
+    printf("-1");
     return 0;
 }
