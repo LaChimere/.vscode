@@ -64,6 +64,7 @@
         "xtr1common": "cpp",
         "cmath": "cpp",
         "ostream": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "*.tcc": "cpp"
     } // 效果效果比cpptools要好
 }
