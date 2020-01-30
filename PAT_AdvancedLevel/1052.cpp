@@ -11,10 +11,7 @@ struct node {
 } list[MAXSIZE];
 
 bool cmp(const node &a, const node &b) {
-    if (!a.flag || !b.flag)
-        return a.flag > b.flag;
-    else
-        return a.key < b.key;
+    return !a.flag || !b.flag ? a.flag > b.flag : a.key < b.key;
 }
 
 int main() {
