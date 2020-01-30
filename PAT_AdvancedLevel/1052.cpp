@@ -38,10 +38,11 @@ int main() {
         sort(list, list + MAXSIZE, cmp);
         printf("%d %05d\n", cnt, list[0].addr);
         for (int i = 0; i < cnt; i++) {
+            printf("%05d %d ", list[i].addr, list[i].key);
             if (i < cnt - 1)
-                printf("%05d %d %05d\n", list[i].addr, list[i].key, list[i + 1].addr);
+                printf("%05d\n", list[i + 1].addr);
             else
-                printf("%05d %d -1\n", list[i].addr, list[i].key);
+                printf("-1\n");
         }
     }
     return 0;
