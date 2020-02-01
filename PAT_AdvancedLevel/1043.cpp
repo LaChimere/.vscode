@@ -27,33 +27,52 @@ BiTree createTree(const vector<int> &seq) {
     return root;
 }
 
-vector<int> preOrder;
-void getPreOrder(const BiTree &root) {
+void getPre(const BiTree &root, vector<int> &vec) {
     if (root == NULL) return;
-    preOrder.push_back(root->data);
-    getPreOrder(root->lchild);
-    getPreOrder(root->rchild);
+    vec.push_back(root->data);
+    getPre(root->lchild, vec);
+    getPre(root->rchild, vec);
 }
-vector<int> mirrorPreOrder;
-void getMirrorPreOrder(const BiTree &root) {
-    if (root == NULL) return;
-    mirrorPreOrder.push_back(root->data);
-    getMirrorPreOrder(root->rchild);
-    getMirrorPreOrder(root->lchild);
+vector<int> getPreOrder(const BiTree &root) {
+    vector<int> vec;
+    getPre(root, vec);
+    return vec;
 }
-vector<int> postOrder;
-void getPostOrder(const BiTree &root) {
+
+void getMirrorPre(const BiTree &root, vector<int> &vec) {
     if (root == NULL) return;
-    getPostOrder(root->lchild);
-    getPostOrder(root->rchild);
-    postOrder.push_back(root->data);
+    vec.push_back(root->data);
+    getMirrorPre(root->rchild, vec);
+    getMirrorPre(root->lchild, vec);
 }
-vector<int> mirrorPostOrder;
-void getMirrorPostOrder(const BiTree &root) {
+vector<int> getMirrorPreOrder(const BiTree &root) {
+    vector<int> vec;
+    getMirrorPre(root, vec);
+    return vec;
+}
+
+void getPost(const BiTree &root, vector<int> &vec) {
     if (root == NULL) return;
-    getMirrorPostOrder(root->rchild);
-    getMirrorPostOrder(root->lchild);
-    mirrorPostOrder.push_back(root->data);
+    getPost(root->lchild, vec);
+    getPost(root->rchild, vec);
+    vec.push_back(root->data);
+}
+vector<int> getPostOrder(const BiTree &root) {
+    vector<int> vec;
+    getPost(root, vec);
+    return vec;
+}
+
+void getMirrorPost(const BiTree &root, vector<int> &vec) {
+    if (root == NULL) return;
+    getMirrorPost(root->rchild, vec);
+    getMirrorPost(root->lchild, vec);
+    vec.push_back(root->data);
+}
+vector<int> getMirrorPostOrder(const BiTree &root) {
+    vector<int> vec;
+    getMirrorPost(root, vec);
+    return vec;
 }
 
 int main() {
@@ -65,11 +84,11 @@ int main() {
         nums.push_back(x);
     }
     BiTree tree = createTree(nums);
-    getPreOrder(tree);
-    getMirrorPreOrder(tree);
+    vector<int> preOrder = getPreOrder(tree);
+    vector<int> mirrorPreOrder = getMirrorPreOrder(tree);
     if (nums == preOrder) {
         printf("YES\n");
-        getPostOrder(tree);
+        vector<int> postOrder = getPostOrder(tree);
         for (int i = 0; i < n; i++) {
             printf("%d", postOrder[i]);
             if (i != n - 1)
@@ -77,7 +96,7 @@ int main() {
         }
     } else if (nums == mirrorPreOrder) {
         printf("YES\n");
-        getMirrorPostOrder(tree);
+        vector<int> mirrorPostOrder = getMirrorPostOrder(tree);
         for (int i = 0; i < n; i++) {
             printf("%d", mirrorPostOrder[i]);
             if (i != n - 1)
