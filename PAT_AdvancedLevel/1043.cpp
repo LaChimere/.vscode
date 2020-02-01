@@ -67,8 +67,7 @@ int main() {
     BiTree tree = createTree(nums);
     getPreOrder(tree);
     getMirrorPreOrder(tree);
-    if (nums != preOrder && nums != mirrorPreOrder) printf("NO");
-    else if (nums == preOrder) {
+    if (nums == preOrder) {
         printf("YES\n");
         getPostOrder(tree);
         for (int i = 0; i < n; i++) {
@@ -84,6 +83,6 @@ int main() {
             if (i != n - 1)
                 printf(" ");
         }
-    }
+    } else printf("NO");
     return 0;
 }
