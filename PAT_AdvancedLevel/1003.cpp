@@ -11,7 +11,7 @@ int shortestNum[MAXSIZE] = {0};
 int cityTeams[MAXSIZE] = {0};
 int team[MAXSIZE] = {0};
 int cities;
-int Dijkstra(const int &startCity, const int &destination, int &teams) {
+int Dijkstra(const int &startCity, const int &destCity, int &teams) {
     fill(dis, dis + cities, INF);
     dis[startCity] = 0;
     shortestNum[startCity] = 1;
@@ -40,8 +40,8 @@ int Dijkstra(const int &startCity, const int &destination, int &teams) {
             }
         }
     }
-    teams = team[destination];
-    return shortestNum[destination];
+    teams = team[destCity];
+    return shortestNum[destCity];
 }
 
 int main() {
