@@ -4,7 +4,7 @@ using namespace std;
 
 const int MAXSIZE = 505;
 const int INF = 9999999;
-int G[MAXSIZE][MAXSIZE] = {{0}};
+int G[MAXSIZE][MAXSIZE];
 bool isVisited[MAXSIZE] = {false};
 int dis[MAXSIZE];
 int shortestNum[MAXSIZE] = {0};
