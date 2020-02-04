@@ -45,15 +45,15 @@ int Dijkstra(const int &startCity, const int &destCity, int &teams) {
 }
 
 int main() {
-    int m, start, dest, gatheredTeams, city1, city2, roadLength;
+    int m, start, dest, gatheredTeams, city1, city2;
     scanf("%d%d%d%d", &cities, &m, &start, &dest);
     fill(G[0], G[0] + MAXSIZE * MAXSIZE, INF);
     for (int i = 0; i < cities; i++)
         scanf("%d", &cityTeams[i]);
     for (int i = 0; i < m; i++) {
         scanf("%d%d", &city1, &city2);
-        scanf("%d", &roadLength);
-        G[city1][city2] = G[city2][city1] = roadLength;
+        scanf("%d", &G[city1][city2]);
+        G[city2][city1] = G[city1][city2];
     }
     int shortestRoads = Dijkstra(start, dest, gatheredTeams);
     printf("%d %d", shortestRoads, gatheredTeams);
