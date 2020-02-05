@@ -29,6 +29,7 @@ int Dijkstra(const int &startCity, const int &destCity, int &totalCost) {
             }
         }
         if (u == -1) break;
+        isVisited[u] = true;
         for (int v = 0; v < n; v++) {
             if (!isVisited[v] && e[u][v].length != INF) {
                 if (dis[u] + e[u][v].length < dis[v]) {
