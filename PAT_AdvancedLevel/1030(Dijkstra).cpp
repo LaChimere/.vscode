@@ -23,9 +23,9 @@ int Dijkstra(const int &startCity, const int &destCity, int &totalCost) {
     for (int i = 0; i < n; i++) {
         int u = -1, nowMin = INF;
         for (int j = 0; j < n; j++) {
-            if (!isVisited[j] && e[i][j].length < nowMin) {
+            if (!isVisited[j] && dis[j] < nowMin) {
                 u = j;
-                nowMin = e[i][j].length;
+                nowMin = dis[j];
             }
         }
         if (u == -1) break;
