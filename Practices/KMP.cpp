@@ -1,8 +1,7 @@
 #include <iostream>
 #include <cstring>
 using namespace std;
-void getNext(int *next, char *s) {
-    int len = strlen(s);
+void getNext(int *next, char *s, int len) {
     int j = -1;
     next[0] = -1;
     for (int i = 1; i < len; i++) {
@@ -15,7 +14,7 @@ void getNext(int *next, char *s) {
 }
 bool KMP(char *text, char *pattern, int *next) {
     int len1 = strlen(text), len2 = strlen(pattern);
-    getNext(next, pattern);
+    getNext(next, pattern, len2);
     int j = -1;
     for (int i = 0; i < len1; i++) {
         while (j != 1 && text[i] != pattern[j+1])
