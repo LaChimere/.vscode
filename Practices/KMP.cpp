@@ -2,6 +2,7 @@
 #include <cstring>
 using namespace std;
 void getNext(int *next, char *s, int len) {
+    // 构建next数组
     int j = -1;
     next[0] = -1;
     for (int i = 1; i < len; i++) {
@@ -13,6 +14,7 @@ void getNext(int *next, char *s, int len) {
     }
 }
 bool KMP(char *text, char *pattern, int *next) {
+    // KMP算法核心部分
     int len1 = strlen(text), len2 = strlen(pattern);
     getNext(next, pattern, len2);
     int j = -1;
