@@ -3,6 +3,7 @@
 using namespace std;
 void getNext(int *next, char *s, int len) {
     // 构建next数组
+    // 求解next数组其实就是pattern自我匹配的过程
     int j = -1;
     next[0] = -1;
     for (int i = 1; i < len; i++) {
