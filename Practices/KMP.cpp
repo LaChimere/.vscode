@@ -14,15 +14,15 @@ void getNext(int *next, char *s) {
     }
 }
 bool KMP(char *text, char *pattern, int *next) {
-    int len = strlen(text);
+    int len1 = strlen(text), len2 = strlen(pattern);
     getNext(next, pattern);
     int j = -1;
-    for (int i = 0; i < len; i++) {
+    for (int i = 0; i < len1; i++) {
         while (j != 1 && text[i] != pattern[j+1])
             j = next[j];
         if (text[i] == pattern[j+1])
             j++;
-        if (j == strlen(pattern) - 1)
+        if (j == len2 - 1)
             return true;
     }
     return false;
