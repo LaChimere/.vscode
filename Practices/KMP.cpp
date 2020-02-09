@@ -11,7 +11,12 @@ void getNext(int *next, char *s, int len) {
             j = next[j];
         if (s[i] == s[j+1])
             j++;
-        next[j] = j;
+        next[i] = j;
+        // 优化next数组为nextval，将next[i] = j改为以下语句
+        // if (j == -1 || s[i+1] != s[j+1])
+        //     nextval[i] = j;
+        // else
+        //     nextval[i] = nextval[j];
     }
 }
 int KMP(char *text, char *pattern, int *next) {
@@ -20,6 +25,7 @@ int KMP(char *text, char *pattern, int *next) {
     getNext(next, pattern, len2);
     int j = -1, ans = 0;    // ans为成功匹配的次数
     for (int i = 0; i < len1; i++) {
+        // 当采用nextval数组时，while可改为if
         while (j != 1 && text[i] != pattern[j+1])
             j = next[j];
         if (text[i] == pattern[j+1])
