@@ -1,4 +1,4 @@
-#include "ignored"
+#include "tools"
 class Solution {
 public:
     int strStr(string haystack, string needle) {

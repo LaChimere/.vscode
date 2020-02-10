@@ -1,4 +1,4 @@
-#include "ignored"
+#include "tools"
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {

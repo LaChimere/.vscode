@@ -1,4 +1,4 @@
-#include "ignored"
+#include "tools"
 class Solution {
 public:
     string countAndSay(int n) {
