@@ -16,6 +16,7 @@ public:
         // if (p->val != q->val) return false;
         // return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
 
+        // 层序遍历
         queue<TreeNode*> qu_p, qu_q;
         qu_p.push(p);
         qu_q.push(q);
