@@ -4,12 +4,11 @@
 using namespace std;
 
 int main() {
-    vector<int> v(3, 100);
-    for (int i = 0; i < v.size(); i++)
-        printf("%d ", v[i]);
-    printf("\n");
-    v.insert(v.begin(), 200);
-    for (int i = 0; i < v.size(); i++)
-        printf("%d ", v[i]);
+    string s = "123";
+    cout << s << endl;
+    s.append(2, '4');
+    cout << s << endl;
+    s.append(0, '5');
+    cout << s << endl;
     return 0;
 }
