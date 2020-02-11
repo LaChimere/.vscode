@@ -4,11 +4,20 @@
 using namespace std;
 
 int main() {
-    string s = "123";
-    cout << s << endl;
-    s.append(2, '4');
-    cout << s << endl;
-    s.append(0, '5');
-    cout << s << endl;
+    vector<vector<int>> v = {{0, 2}, {1, 2, 3}, {4, 6}};
+    for (int i = 0; i < v.size(); i++) {
+        for (int j = 0; j < v[i].size(); j++) {
+            printf("%d ", v[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    reverse(v.begin(), v.end());
+    for (int i = 0; i < v.size(); i++) {
+        for (int j = 0; j < v[i].size(); j++) {
+            printf("%d ", v[i][j]);
+        }
+        printf("\n");
+    }
     return 0;
 }
