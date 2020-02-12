@@ -1,23 +1,13 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <cctype>
 using namespace std;
 
 int main() {
-    vector<vector<int>> v = {{0, 2}, {1, 2, 3}, {4, 6}};
-    for (int i = 0; i < v.size(); i++) {
-        for (int j = 0; j < v[i].size(); j++) {
-            printf("%d ", v[i][j]);
-        }
-        printf("\n");
-    }
-    printf("\n");
-    reverse(v.begin(), v.end());
-    for (int i = 0; i < v.size(); i++) {
-        for (int j = 0; j < v[i].size(); j++) {
-            printf("%d ", v[i][j]);
-        }
-        printf("\n");
-    }
+    char c = '3';
+    printf("c = %c\n", c);
+    c = tolower(c);
+    printf("c = %c", c);
     return 0;
 }
