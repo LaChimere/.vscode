@@ -15,7 +15,7 @@ public:
         //     if (it->second == 1) result = it->first;
         // return result;
         
-        // exclusive OR
+        // exclusive OR, time complexity: O(n), space comlexity: O(1)
         int result = nums[0];
         for (int i = 1; i < nums.size(); i++)
             result = result ^ nums[i];
