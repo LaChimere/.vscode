@@ -26,7 +26,7 @@ public:
         while (p != NULL && lenA > lenB) {p = p->next; lenA--;}
         while (q != NULL && lenB > lenA) {q = q->next; lenB--;}
         while (p != NULL && q != NULL) {
-            if (p == q && p->val == q->val) return p;
+            if (p == q) return p;
             p = p->next;
             q = q->next;
         }
