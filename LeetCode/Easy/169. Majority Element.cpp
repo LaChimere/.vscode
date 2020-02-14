@@ -7,6 +7,7 @@ public:
         // sort(nums.begin(), nums.end());
         // return nums[nums.size() / 2];
         
+        // Boyer-Moore 投票算法
         int cnt = 0;
         int candidate;
         for (int num : nums) {
