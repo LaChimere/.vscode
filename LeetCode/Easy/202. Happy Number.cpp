@@ -28,14 +28,14 @@ public:
 // public:
 //     bool isHappy(int n) {
 //         unordered_map<int, bool> hash;
-//         return isHappy(n, hash, 0);
+//         return isHappy(n, hash);
 //     }
     
-//     bool isHappy(int n, unordered_map<int, bool>& hash, int k) {
+//     bool isHappy(int n, unordered_map<int, bool>& hash) {
 //         if (n == 1) {hash[n] = true; return hash[n];}
+//         if (n == 4) {hash[n] = false; return hash[n];}
 //         if (hash.find(n) != hash.end()) return hash[n];
-//         if (k > 99) {hash[n] = false; return hash[n];}
-//         if (isHappy(getSquare(n), hash, k + 1)) hash[n] = true;
+//         if (isHappy(getSquareSum(n), hash)) hash[n] = true;
 //         else hash[n] = false;
 //         return hash[n];
 //     }
