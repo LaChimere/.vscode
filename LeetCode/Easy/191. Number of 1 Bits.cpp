@@ -3,12 +3,21 @@ class Solution {
 public:
     int hammingWeight(uint32_t n) {
         // 位运算
-        int bits = 0, mask = 1;
-        for (int i = 0; i < 32; i++) {
-            if ((n & mask) != 0) bits++;
-            mask <<= 1;
+        // 1)
+        int cnt = 0;
+        while (n != 0) {
+            cnt++;
+            n &= (n - 1);
         }
-        return bits;
+        return cnt;
+
+        // 2)
+        // int bits = 0, mask = 1;
+        // for (int i = 0; i < 32; i++) {
+        //     if ((n & mask) != 0) bits++;
+        //     mask <<= 1;
+        // }
+        // return bits;
 
         // bitset<32> n_bit(n);
         // string s = n_bit.to_string();
