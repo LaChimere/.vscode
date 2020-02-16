@@ -9,5 +9,7 @@
 using namespace std;
 
 int main() {
+    if (nullptr == NULL)
+        cout << "true";
     return 0;
 }
