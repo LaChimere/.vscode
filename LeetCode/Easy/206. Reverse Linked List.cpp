@@ -21,10 +21,10 @@ public:
         return pre;
 
         // 递归写法
-        if (head == nullptr || head->next == nullptr) return head;
-        ListNode *cur = reverseList(head->next);
-        head->next->next = head;
-        head->next = nullptr;
-        return cur;
+        // if (head == nullptr || head->next == nullptr) return head;
+        // ListNode *cur = reverseList(head->next);
+        // head->next->next = head;
+        // head->next = nullptr;
+        // return cur;
     }
 };
