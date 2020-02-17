@@ -2,7 +2,9 @@
 class Solution {
 public:
     bool isPowerOfTwo(int n) {
+        // 位运算
         return n > 0 && (n & (n - 1)) == 0;
+
         // unordered_map<int, int> powerOfTwo;
         // int i = 0, result = 1;
         // while (i < 31) {
