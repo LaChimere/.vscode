@@ -2,6 +2,7 @@
 class Solution {
 public:
     string getHint(string secret, string guess) {
+        // bull: 相同位置相同字符数, cow: 相同字符数 - bull
         int bull = 0, cow = 0;
         int bucket[10] = {0};
         size_t len = secret.length();
