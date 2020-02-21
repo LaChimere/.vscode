@@ -9,8 +9,7 @@ public:
             i = (i + num / i) / 2;
         }
         return i * i == num;
-        
-        
+
         // Binary Search
         // int left = 1, right = num;
         // while (left < right) {
