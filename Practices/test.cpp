@@ -17,6 +17,10 @@ int main() {
     myset.insert(3);
     for (auto it = myset.begin(); it != myset.end(); it++)
         cout << *it << " ";
-    cout << myset.count(2);
+    cout << endl;
+    auto it = myset.find(4);
+    myset.erase(it);
+    for (auto it = myset.begin(); it != myset.end(); it++)
+        cout << *it << " ";
     return 0;
 }
