@@ -11,16 +11,8 @@
 using namespace std;
 
 int main() {
-    unordered_multiset<int> myset;
-    myset.insert(3);
-    myset.insert(5);
-    myset.insert(3);
-    for (auto it = myset.begin(); it != myset.end(); it++)
-        cout << *it << " ";
-    cout << endl;
-    auto it = myset.find(4);
-    myset.erase(it);
-    for (auto it = myset.begin(); it != myset.end(); it++)
-        cout << *it << " ";
+    unordered_map<int, int> hash;
+    hash[1] = 0;
+    cout << hash[1];
     return 0;
 }
