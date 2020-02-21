@@ -10,7 +10,7 @@ public:
         int low = 1, high = n;
         int mid = -1;
         while (low <= high) {
-            mid = low + (high - low) / 2;
+            mid = (unsigned(low) + unsigned(high)) >> 1;
             if (guess(mid) == 0) break;
             else if (guess(mid) == -1) high = mid;
             else low = mid + 1;
