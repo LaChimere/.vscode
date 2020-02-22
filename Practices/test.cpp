@@ -11,8 +11,7 @@
 using namespace std;
 
 int main() {
-    unordered_map<int, int> hash;
-    hash[1] = 0;
-    cout << hash[1];
+    char c = '\0';
+    cout << int(c);
     return 0;
 }
