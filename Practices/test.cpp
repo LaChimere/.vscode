@@ -11,7 +11,10 @@
 using namespace std;
 
 int main() {
-    char c = '\0';
-    cout << int(c);
+    set<int> myset({1,2,3,5,4,8,6});
+    auto it = myset.rbegin();
+    it++;
+    it++;
+    cout << *it;
     return 0;
 }
