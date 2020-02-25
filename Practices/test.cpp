@@ -11,8 +11,8 @@
 using namespace std;
 
 int main() {
-    string s1 = "hi", s2 = "hello";
-    swap(s1, s2);
-    cout << s1 << " " << s2;
+    unordered_map<char, int> hash;
+    hash['w'] = 2;
+    cout << hash['w'];
     return 0;
 }
