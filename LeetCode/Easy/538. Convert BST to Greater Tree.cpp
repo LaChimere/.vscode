@@ -17,7 +17,6 @@ private:
     //     changeVal(root->left, pre);
     // }
 
-    // 反序中序Morris遍历
     TreeNode* getSuccessor(TreeNode* node) {
         TreeNode* succ = node->right;
         while (succ->left && succ->left != node)
@@ -28,6 +27,7 @@ public:
     TreeNode* convertBST(TreeNode* root) {
         int sum = 0;
         TreeNode* node = root;
+        // 反序中序Morris遍历
         while (node) {
             /* 
              * if there's no right subtree, then we can visit this node and
