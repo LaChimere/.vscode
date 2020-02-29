@@ -45,7 +45,9 @@ public:
              */
             else {
                 TreeNode* succ = getSuccessor(node);
-                // if the left subtree is nullptr, then we have never been here before.
+                /* 
+                 * if the left subtree is nullptr, then we have never been here before.
+                 */
                 if (!succ->left) {
                     succ->left = node;
                     node = node->right;
