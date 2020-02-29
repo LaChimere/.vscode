@@ -9,12 +9,12 @@ struct TreeNode {
 
 class Solution {
 private:
-    // void changeVal(TreeNode* root, TreeNode*& pre) {
+    // void rInOrder(TreeNode* root, TreeNode*& pre) {
     //     if (!root) return;
-    //     changeVal(root->right, pre);
+    //     rInOrder(root->right, pre);
     //     if (pre) root->val += pre->val;
     //     pre = root;
-    //     changeVal(root->left, pre);
+    //     rInOrder(root->left, pre);
     // }
 
     TreeNode* getSuccessor(TreeNode* node) {
@@ -69,7 +69,7 @@ public:
 
     // TreeNode* convertBST(TreeNode* root) {
     //     TreeNode *pre = nullptr;
-    //     changeVal(root, pre);
+    //     rInOrder(root, pre);
     //     return root;
     // }
 };
