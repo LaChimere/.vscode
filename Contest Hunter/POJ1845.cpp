@@ -6,8 +6,8 @@ const int MAXSIZE = 10000, MOD = 9901;
 vector<int> primes;
 vector<bool> isPrime(MAXSIZE, true);
 struct factor {
-    int x, cnt;
-    factor(int _prime, int _cnt = 0) : x(_prime), cnt(_cnt) {}
+    int prime, cnt;
+    factor(int _prime, int _cnt = 0) : prime(_prime), cnt(_cnt) {}
 };
 vector<factor> fac;
 
@@ -63,7 +63,7 @@ int main() {
         int ans = 1;
         for (int i = 0; i < fac.size(); i++) {
             fac[i].cnt *= B;
-            ans = (ans * sum(fac[i].x, fac[i].cnt)) % MOD;
+            ans = (ans * sum(fac[i].prime, fac[i].cnt)) % MOD;
         }
         cout << ans << endl;
         fac.clear();
