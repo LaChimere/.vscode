@@ -81,6 +81,8 @@
         "xfacet": "cpp",
         "xlocinfo": "cpp",
         "xstddef": "cpp",
-        "bitset": "cpp"
+        "bitset": "cpp",
+        "cfenv": "cpp",
+        "chrono": "cpp"
     } // 效果效果比cpptools要好
 }
