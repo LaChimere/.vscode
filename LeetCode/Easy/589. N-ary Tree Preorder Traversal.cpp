@@ -22,8 +22,7 @@ private:
     void preorder(Node* root, vector<int>& list) {
         if (!root) return;
         list.push_back(root->val);
-        for (int i = 0; i < root->children.size(); i++)
-            preorder(root->children[i], list);
+        for (Node* child : root->children) preorder(child, list);
     }
 public:
     vector<int> preorder(Node* root) {
