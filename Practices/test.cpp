@@ -11,12 +11,9 @@
 using namespace std;
 
 int main() {
-    vector<vector<int>> res(3, vector<int>(4, 1));
-    for (int i = 0; i < res.size(); i++)
-    {
-        for (int j = 0; j < res[i].size(); j++)
-            cout << res[i][j] << " ";
-        cout << endl;
-    }
+    vector<int> v1({1, 2, 3}), v2({4, 5, 6});
+    swap(v1, v2);
+    for (int num : v1)
+        cout << num << " ";
     return 0;
 }
