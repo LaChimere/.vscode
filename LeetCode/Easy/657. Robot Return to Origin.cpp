@@ -15,6 +15,6 @@ public:
                     break;
             }
         }
-        return (horizontal == 0 && vertical == 0);
+        return horizontal == 0 && vertical == 0;
     }
 };
