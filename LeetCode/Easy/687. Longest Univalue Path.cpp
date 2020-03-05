@@ -10,6 +10,7 @@ struct TreeNode {
 class Solution {
 private:
     int arrowLength(TreeNode* root, int& path) {
+        // 与第543题一起复习
         if (!root) return 0;
         int leftPath = arrowLength(root->left, path);
         int rightPath = arrowLength(root->right, path);
