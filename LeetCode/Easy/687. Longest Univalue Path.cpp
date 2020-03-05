@@ -15,9 +15,9 @@ private:
         int rightPath = arrowLength(root->right, path);
         int arrowLeft = 0, arrowRight = 0;
         if (root->left && root->left->val == root->val)
-            arrowLeft += leftPath + 1;
+            arrowLeft = leftPath + 1;
         if (root->right && root->right->val == root->val)
-            arrowRight += rightPath + 1;
+            arrowRight = rightPath + 1;
         path = max(path, arrowLeft + arrowRight);
         return max(arrowLeft, arrowRight);
     }
