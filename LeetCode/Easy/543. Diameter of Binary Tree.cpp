@@ -10,6 +10,7 @@ struct TreeNode {
 class Solution {
 private:
     int depth(TreeNode* root, int& nodes) {
+        // 与第687题一起复习
         if (!root) return 0;
         int leftDepth = depth(root->left, nodes);
         int rightDepth = depth(root->right, nodes);
