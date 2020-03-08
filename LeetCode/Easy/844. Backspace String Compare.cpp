@@ -14,12 +14,6 @@ public:
         stack<char> s, t;
         getRes(s, S);
         getRes(t, T);
-        if (s.size() != t.size()) return false;
-        while (!s.empty() && !t.empty()) {
-            if (s.top() != t.top()) return false;
-            s.pop();
-            t.pop();
-        }
-        return true;
+        return s == t;
     }
 };
