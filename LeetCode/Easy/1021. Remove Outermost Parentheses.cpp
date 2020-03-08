@@ -8,15 +8,12 @@ public:
         int i = 0;
         st.push(S[i++]);
         while (i < S.length()) {
-            if (!st.empty() && S[i] == '(') {
-                res.push_back(S[i]);
-                st.push(S[i]);
-            } else if (st.empty() && S[i] == '(') {
+            if (S[i] == '(') {
+                if (!st.empty()) res.push_back(S[i]);
                 st.push(S[i]);
             } else {
                 st.pop();
-                if (!st.empty())
-                    res.push_back(S[i]);
+                if (!st.empty()) res.push_back(S[i]);
             }
             i++;
         }
