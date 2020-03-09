@@ -29,16 +29,6 @@ struct fruit {
 };
 
 int main() {
-    priority_queue<fruit> q;
-    fruit f1("Apple", 3);
-    fruit f2("Pear", 4);
-    fruit f3("Peach", 1);
-    q.push(f1);
-    q.push(f2);
-    q.push(f3);
-    while (!q.empty()) {
-        cout << q.top().name << " : " << q.top().price << endl;
-        q.pop();
-    }
+
     return 0;
 }
