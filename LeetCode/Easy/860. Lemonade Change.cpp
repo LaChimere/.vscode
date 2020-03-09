@@ -9,7 +9,7 @@ public:
                 if (five) {ten++; five--;}
                 else return false;
             }
-            else if (bill == 20) {
+            else {
                 if (ten && five) {ten--; five--;}
                 else if (five >= 3) five -= 3;
                 else return false;
