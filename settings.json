@@ -83,6 +83,7 @@
         "xstddef": "cpp",
         "bitset": "cpp",
         "cfenv": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "filesystem": "cpp"
     } // 效果效果比cpptools要好
 }
