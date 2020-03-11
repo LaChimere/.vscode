@@ -18,5 +18,17 @@ public:
         vector<string> str;
         permuteString(str, S, 0, S.length());
         return str;
+        
+        // vector<string> res({S});
+        // for (int i = 0; i < S.length(); i++)
+        //     if (isalpha(S[i])) {
+        //         int size = res.size();
+        //         for (int j = 0; j < size; j++) {
+        //             string temp = res[j];
+        //             temp[i] ^= 1 << 5;
+        //             res.emplace_back(move(temp));
+        //         }
+        //     }
+        // return res;
     }
 };
