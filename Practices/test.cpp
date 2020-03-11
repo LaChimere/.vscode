@@ -11,24 +11,22 @@
 #include <queue>
 using namespace std;
 
-template<typename T> void print_queue(T& q) {
-    while (!q.empty()) {
-        cout << q.top() << " ";
-        q.pop();
+struct info {
+    string name, address;
+    int age;
+    info(string _name, string _address, int _age) : name(_name), address(_address), age(_age) {
+        cout << "constructed" << endl;
     }
-    cout << endl;
-}
-
-struct fruit {
-    string name;
-    int price;
-    fruit(string _name, int _price) : name(_name), price(_price) {}
-    friend bool operator<(const fruit& f1, const fruit& f2) {
-        return f1.price > f2.price;
+    info(info&& p) : name(move(p.name)), address(move(p.address)), age(p.age) {
+        cout << "copied" << endl;
     }
 };
 
 int main() {
-
+    vector<info> stu;
+    cout << "emplace_back\n";
+    stu.emplace_back("Tony", "Hometown", 12);
+    cout << "------------------\n" << "push_back\n";
+    stu.push_back(info("Mike", "New York", 15));
     return 0;
 }
