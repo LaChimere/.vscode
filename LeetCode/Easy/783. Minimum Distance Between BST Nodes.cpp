@@ -9,18 +9,18 @@ struct TreeNode {
 
 class Solution {
 private:
-    void inOrder(TreeNode* root, TreeNode*&& pre, int& res) {
+    void inOrder(TreeNode* root, TreeNode*& pre, int& res) {
         if (!root) return;
-        inOrder(root->left, move(pre), res);
+        inOrder(root->left, pre, res);
         if (pre) res = min(res, root->val - pre->val);
         pre = root;
-        inOrder(root->right, move(pre), res);
+        inOrder(root->right, pre, res);
     }
 public:
     int minDiffInBST(TreeNode* root) {
         int res = INT_MAX;
-        // TreeNode* pre = nullptr;
-        inOrder(root, nullptr, res);
+        TreeNode* pre = nullptr;
+        inOrder(root, pre, res);
         return res;
     }
 };
