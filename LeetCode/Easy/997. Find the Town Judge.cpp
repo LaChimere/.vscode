@@ -20,7 +20,7 @@ public:
             if (candidates[i] && check(g, N, i)) return i;
         return -1;
 
-        
+        // 作为judge的必要条件: 出度与入度之和为N - 1
         // vector<int> degrees(N + 1, 0);
         // for (vector<int> t : trust) {
         //     degrees[t[0]]--;
