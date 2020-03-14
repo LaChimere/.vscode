@@ -22,11 +22,20 @@ struct info {
     }
 };
 
+int lengthOfLIS(vector<int>& nums) {
+    int len = nums.size();
+    vector<int> dp(len, 1);
+    int res = 0;
+    for (int i = 0; i < len; i++) {
+        for (int j = 0; j < i; j++)
+            if (nums[i] > nums[j]) dp[i] = max(1, dp[j] + 1);
+        res = max(res, dp[i]);
+    }
+    return res;
+}
+
 int main() {
-    vector<info> stu;
-    cout << "emplace_back\n";
-    stu.emplace_back("Tony", "Hometown", 12);
-    cout << "------------------\n" << "push_back\n";
-    stu.push_back(info("Mike", "New York", 15));
+    vector<int> nums({1, 3, 6, 7, 9, 4, 10, 5, 6});
+    cout << lengthOfLIS(nums);
     return 0;
 }
