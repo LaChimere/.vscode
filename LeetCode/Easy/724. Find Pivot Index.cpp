@@ -7,13 +7,19 @@ public:
         if (len == 1) return 0;
         int sum = 0;
         for (int num : nums) sum += num;
-        int i = 0;
-        int leftSum = 0, rightSum = sum - leftSum - nums[i];
-        while (i < len) {
-            if (leftSum == rightSum) return i;
-            leftSum += nums[i++];
-            if (i < len) rightSum -= nums[i];
+        int leftSum = 0;
+        for (int i = 0; i < len; i++) {
+            if (leftSum * 2 == sum - nums[i]) return i;
+            leftSum += nums[i];
         }
+        
+        // int i = 0;
+        // int leftSum = 0, rightSum = sum - leftSum - nums[i];
+        // while (i < len) {
+        //     if (leftSum == rightSum) return i;
+        //     leftSum += nums[i++];
+        //     if (i < len) rightSum -= nums[i];
+        // }
         return -1;
     }
 };
