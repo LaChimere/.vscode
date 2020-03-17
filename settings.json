@@ -84,6 +84,7 @@
         "bitset": "cpp",
         "cfenv": "cpp",
         "chrono": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "cassert": "cpp"
     } // 效果效果比cpptools要好
 }
