@@ -12,9 +12,9 @@ public:
             if (i & 1) b ^= 1 << (3 * moves[i][0] + moves[i][1]);
             else a ^= 1 << (3 * moves[i][0] + moves[i][1]);
         }
-        for (int i : win) {
-            if ((a & i) == i) return "A";
-            if ((b & i) == i) return "B";
+        for (int w : win) {
+            if ((a & w) == w) return "A";
+            if ((b & w) == w) return "B";
         }
         return len == 9 ? "Draw" : "Pending";
     }
