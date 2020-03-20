@@ -12,16 +12,6 @@
 using namespace std;
 
 int main() {
-    vector<int> v{1, 3, 4, 5, 6, 0, 4, 8, 0, 2};
-    auto it = v.begin();
-    for (; it != v.end(); it++) {
-        if (*it == 0) {
-            auto temp = it;
-            v.insert(it, 0);
-            it = temp;
-        }
-    }
-    for (int n : v)
-        cout << n << " ";
+    cout << 0b10010;
     return 0;
 }
