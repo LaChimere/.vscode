@@ -12,6 +12,13 @@
 using namespace std;
 
 int main() {
-    cout << 0b10010;
+    vector<int> v({0, 1, 2, 3});
+    for (int n : v) cout << n << " ";
+    cout << endl;
+    for (int n : v) n++;
+    for (int n : v) cout << n << " ";
+    cout << endl;
+    for (int& n : v) n++;
+    for (int n : v) cout << n << " ";
     return 0;
 }
