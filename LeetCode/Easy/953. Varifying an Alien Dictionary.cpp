@@ -7,7 +7,6 @@ public:
         for (int i = 0; i < order.length(); i++) val[order[i]] = i;
         for (int i = 1; i < words.size(); i++) {
             int len1 = words[i - 1].length(), len2 = words[i].length();
-            if (len1 > len2 && words[i - 1].substr(0, len2) == words[i]) return false;
             int p = 0, q = 0;
             while (p < len1 && q < len2) {
                 if (val[words[i - 1][p]] < val[words[i][q]]) break;
