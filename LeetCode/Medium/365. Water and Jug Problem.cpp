@@ -59,7 +59,7 @@ public:
         // using stack to avoid stack-overflowing
         stack<pair<int, int>> st;
         st.emplace(0, 0);
-        auto hash_function = [](const pair<int, int> &o) {
+        auto hash_function = [](const pair<int, int>& o) {
             return hash<int>()(o.first) ^ hash<int>()(o.second);
         };
         unordered_set<pair<int, int>, decltype(hash_function)> seen(0, hash_function);
