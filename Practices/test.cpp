@@ -12,13 +12,12 @@
 using namespace std;
 
 int main() {
-    vector<int> v({0, 1, 2, 3});
-    for (int n : v) cout << n << " ";
-    cout << endl;
-    for (int n : v) n++;
-    for (int n : v) cout << n << " ";
-    cout << endl;
-    for (int& n : v) n++;
-    for (int n : v) cout << n << " ";
+    bitset<32> num = bitset<32>(5);
+    int k = 0;
+    for (int i = 0; i < 32; i++) {
+        cout << num[i];
+        k = (k + 1) % 4;
+        if (k == 0) cout << " ";
+    }
     return 0;
 }
