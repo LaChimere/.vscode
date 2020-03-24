@@ -3,6 +3,7 @@ class Solution {
 public:
     int rob(vector<int>& nums) {
         // Dynamic Programming
+        // This test is the same as Interview 17.16 Masseuse LCCI
         int n = nums.size();
         if (n == 0) return 0;
         vector<int> dp(n + 1);
