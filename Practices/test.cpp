@@ -12,5 +12,11 @@
 using namespace std;
 
 int main() {
+    string s = "jinlingxia";
+    auto it = s.begin();
+    while (*it != 'l')
+        it++;
+    s.erase(it);
+    cout << *it;
     return 0;
 }
