@@ -13,10 +13,9 @@ using namespace std;
 
 int main() {
     string s = "jinlingxia";
-    auto it = s.begin();
-    while (*it != 'l')
-        it++;
-    s.erase(it);
-    cout << *it;
+    auto it = s.begin() + 3;
+    cout << *it << endl;
+    s.insert(it, 1, '_');
+    cout << *it << endl;
     return 0;
 }
