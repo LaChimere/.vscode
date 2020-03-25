@@ -5,7 +5,7 @@ public:
         if (A.length() != B.length()) return false;
         if (A == B) {
             vector<int> count(26, 0);
-            for (char& c : A) count[c - 'a']++;
+            for (char c : A) count[c - 'a']++;
             for (int cnt : count) 
                 if (cnt > 1) return true;
             return false;
