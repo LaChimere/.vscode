@@ -2,7 +2,7 @@
 class Solution {
 public:
     int findTheDistanceValue(vector<int>& arr1, vector<int>& arr2, int d) {
-        int len1 = arr1.size(), len2 = arr2.size();
+        int len2 = arr2.size();
         sort(arr2.begin(), arr2.end());
         int cnt = 0;
         for (int num : arr1) {
