@@ -2,13 +2,13 @@
 class Solution {
 public:
     char nextGreatestLetter(vector<char>& letters, char target) {
-        char res = char('z' + 1);
-        for (char c : letters)
-            if (c > target && c < res) res = c;
-        if (res != char('z' + 1)) return res;
-        target = target - 26;
-        for (char c : letters)
-            if (c > target && c < res) res = c;
-        return res;
+        int left = 0, right = letters.size() - 1;
+        if (target >= letters[right] || target < letters[left]) return letters[0];
+        while (left < right - 1) {
+            int mid = left + (right - left) / 2;
+            if (target < letters[mid]) right = mid;
+            else left = mid;
+        }
+        return letters[right];
     }
-};
+};;
