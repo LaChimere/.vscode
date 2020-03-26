@@ -19,7 +19,6 @@ private:
     }
 public:
     int daysBetweenDates(string date1, string date2) {
-        if (date1 > date2) swap(date1, date2);
-        return getDate(date2) - getDate(date1);
+        return abs(getDate(date2) - getDate(date1));
     }
 };
