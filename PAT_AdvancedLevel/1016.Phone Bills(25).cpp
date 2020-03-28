@@ -51,11 +51,12 @@ int main() {
         double total = 0.0;
         for (int i = 1; i < temp.size(); i += 2) {
             double t = billFromZero(temp[i]) - billFromZero(temp[i - 1]);
-            printf("%02d:%02d:%02d %02d:%02d:%02d %d $%.2f\n",
-                    temp[i - 1].dd, temp[i - 1].hh, temp[i - 1].mm,
-                    temp[i].dd, temp[i].hh, temp[i].mm,
-                    temp[i].time - temp[i - 1].time, t
-                    );
+            printf(
+                "%02d:%02d:%02d %02d:%02d:%02d %d $%.2f\n",
+                temp[i - 1].dd, temp[i - 1].hh, temp[i - 1].mm,
+                temp[i].dd, temp[i].hh, temp[i].mm,
+                temp[i].time - temp[i - 1].time, t
+            );
             total += t;
         }
         printf("Total amount: $%.2f\n", total);
