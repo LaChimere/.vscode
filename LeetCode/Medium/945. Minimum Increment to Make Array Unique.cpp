@@ -1,4 +1,6 @@
-#include "tools"
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 private:
     vector<int> pos = vector<int>(80000, -1);
