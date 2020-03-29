@@ -1,4 +1,6 @@
-#include "tools"
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 private:
     int dfs(vector<vector<int>>& grid, int i, int j) {
