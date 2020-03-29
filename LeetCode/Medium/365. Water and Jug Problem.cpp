@@ -1,4 +1,6 @@
-#include "tools"
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 private:
     int gcd(int a, int b) {return b ? gcd(b, a % b) : a;}
