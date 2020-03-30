@@ -13,7 +13,6 @@ void dfs(int u, int sum, int state)
         cout << endl;
         return;
     }
-    if (u == n) return;
     dfs(u + 1, sum + 1, state | 1 << u);
     dfs(u + 1, sum, state);
 }
