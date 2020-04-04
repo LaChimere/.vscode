@@ -43,3 +43,24 @@ public:
         return sum;
     }
 };
+
+class Solution_Stack {
+public:
+    int trap(vector<int>& height) {
+        int sum = 0, len = height.size(), cur = 0;
+        stack<int> st;
+        while (cur < len) {
+            while (!st.empty() && height[cur] > height[st.top()]) {
+                int level = height[st.top()];
+                st.pop();
+                if (st.empty())
+                    break;
+                int dis = cur - st.top() - 1;
+                int minLevel = min(height[st.top()], height[cur]);
+                sum += dis * (minLevel - level);
+            }
+            st.push(cur++);
+        }
+        return sum;
+    }
+};
