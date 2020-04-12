@@ -39,3 +39,28 @@ public:
         return res;
     }
 };
+
+class Solution2 {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        if (k == 1) return nums;
+
+        int len = nums.size();
+        vector<int> left(len), right(len);
+        left[0] = nums[0], right[len - 1] = nums[len - 1];
+
+        for (int i = 1; i < len; i++) {
+            if (i % k == 0) left[i] = nums[i];
+            else left[i] = max(left[i - 1], nums[i]);
+
+            int j = len - i - 1;
+            if ((j + 1) % k == 0) right[j] = nums[j];
+            else right[j] = max(right[j + 1], nums[j]);
+        }
+
+        vector<int> res;
+        for (int i = 0; i < len - k + 1; i++)
+            res.push_back(max(left[i + k - 1], right[i]));
+        return res;
+    }
+};
