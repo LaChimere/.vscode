@@ -40,7 +40,7 @@ public:
     }
 };
 
-class Solution2 {
+class SolutionDP {
 public:
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
         if (k == 1) return nums;
