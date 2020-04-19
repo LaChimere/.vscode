@@ -31,9 +31,8 @@ public:
                 }
             }
             // 还没有找到循环节，所有的 s1 就用完了
-            if (s1cnt == n1) {
-                return s2cnt / n2;
-            }
+            if (s1cnt == n1) return s2cnt / n2;
+            
             // 出现了之前的 index，表示找到了循环节
             if (recall.count(index)) {
                 auto [s1cnt_prime, s2cnt_prime] = recall[index];
