@@ -51,3 +51,27 @@ public:
         return res;
     }
 };
+
+class Solution3 {
+public:
+    vector<int> rightSideView(TreeNode *root) {
+        vector<int> res;
+        if (!root)
+            return res;
+        queue<TreeNode *> q;
+        q.push(root);
+        while (!q.empty()) {
+            res.push_back(q.back()->val);
+            int size = q.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode *t = q.front();
+                q.pop();
+                if (t->left)
+                    q.push(t->left);
+                if (t->right)
+                    q.push(t->right);
+            }
+        }
+        return res;
+    }
+};
