@@ -39,7 +39,6 @@ int main()
             if (i < maxDepth)
                 cout << " ";
         }
-        maxDepth = -1;
     }
 
     return 0;
