@@ -5,7 +5,7 @@ class Solution {
 public:
     string minWindow(string s, string t) {
         if (s.length() < t.length())
-        return "";
+            return "";
 
         int cnt = 0;
         unordered_map<char, int> m;
